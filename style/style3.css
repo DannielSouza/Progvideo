@@ -6,11 +6,23 @@
     text-decoration: none;
     font-family: Roboto, Arial;
     box-sizing: border-box;
+    transition: .5s;
+}
+
+.themeContainer button{
+    background: none;
+}
+
+
+.invisivle{
+    display: none;
 }
 
 li{
     list-style: none;
 }
+
+
 
 /*  HEADER  */
 
@@ -43,12 +55,14 @@ body{
 }
 
 #buscar{
-    
+    border: solid darkgray 1px;
     padding: 5px;
     position: absolute;
 }
 
 #digitar{
+    border: solid darkgray 1px;
+    border-right: none;
     width: 500px;
     border-radius: 4px 0px 0px 4px;
     padding: 0px 10px;
@@ -377,9 +391,27 @@ body::-webkit-scrollbar-thumb {
     display: none;
 }
 
+
+
 @media (max-width: 1025px){
 
     #digitar{
         width: 300px;
     }
+}
+
+/* THEME CHANGE */
+
+.whiteTheme{
+    background-color: #fafafa;
+    background: #fafafa;
+    color: black;
+}
+
+.whiteThemeTitle{
+    color: black !important;
+}
+
+.whiteThemeInfos{
+    color: #6D6D6D !important;
 }

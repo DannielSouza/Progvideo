@@ -5,16 +5,28 @@
     padding: 0%;
     text-decoration: none;
     font-family: Roboto, Arial;
+    transition: .5s;
+}
+
+.themeContainer button{
+    background: none;
+}
+
+
+.invisivle{
+    display: none;
 }
 
 li{
     list-style: none;
 }
+ 
 
 /*  HEADER  */
 
 body{
-    background: #202022;   
+    background: #202022;  
+    overflow-x: hidden; 
 }
 
 .header{
@@ -40,17 +52,13 @@ body{
     position: relative;
 }
 
-#buscar{
-    width: 50px;
-    padding: 5px;
-    position: absolute;
-}
 
 #digitar{
     width: 500px;
     border-radius: 4px 0px 0px 4px;
     padding: 0px 10px;
     text-transform: uppercase;
+    border: 1px solid darkgray;
 }
 input:focus {
     box-shadow: 0 0 0 0;
@@ -58,8 +66,14 @@ input:focus {
 }
 
 #buscar{
-    border-radius: 0px 4px 4px 0px;
+    height: 43px;
+    width: 50px;
+    position: absolute;
+    
+    border-radius: 0px 8px 8px 0px;
     cursor: pointer;
+    border: 1px solid darkgray;
+    border-left: none;
 }
 
 .formContainer input, button{
@@ -246,7 +260,7 @@ body::-webkit-scrollbar-thumb {
 
 .options a{
     color: white;
-    border: 1px solid white;
+    border: 1px solid darkgray;
     border-radius: 5px;
     padding: 5px 15px;
     transition: .6s;
@@ -277,6 +291,10 @@ body::-webkit-scrollbar-thumb {
     position: relative;
     width: 850px;
     padding-top: 30px;
+}
+
+#profileChannelName{
+    cursor: pointer;
 }
 
 .views{
@@ -339,4 +357,111 @@ body::-webkit-scrollbar-thumb {
 .profileInfo span{
     color: darkgray;
     font-size: 12px;
+}
+
+
+ /* THEME CHANGE */
+
+ .whiteTheme{
+    background-color: #fafafa;
+    background: #fafafa;
+    border-color:  black;
+}
+
+.whiteThemeTitle{
+    color: black !important; 
+}
+
+.whiteThemeInfos{
+    color: #6D6D6D;
+}
+
+
+
+/* MEDIAS */
+
+@media (max-width: 950px){
+
+    #sectionContainer{
+        max-width: 50vw;
+        margin: 0;
+    }
+
+    #sectionContainer div{
+        max-width: 100%;
+    }
+
+    video{
+        width: 80%;
+    }
+
+    .videoInfoText{
+        display: none;
+    }
+
+}
+
+@media (max-width: 1050px){
+
+    #buscar{
+        width: 50px;
+    }
+    
+    #digitar{
+        width: 300px;
+    }
+
+
+}
+
+@media (max-width: 770px){
+
+    #buscar{
+        width: 30px;
+    }
+    
+    #digitar{
+        width: 150px;
+    }
+
+    #logoPc{
+        display: none;
+    }
+
+    #logoMobile{
+        display: block;
+    }
+
+
+}
+
+
+@media (max-width: 440px){
+
+    #buscar{
+        width: 35px;
+        top: 0px;
+        border: none;
+        background-color: transparent;
+        
+    }
+    
+    #digitar{
+        width: 0px;
+        opacity: 0;
+        
+    }
+
+
+}
+
+@media (max-width: 320px){
+
+    .videos{
+        width: 315px;
+    }
+
+    #notificationIcon{
+        display: none;
+    }
 }

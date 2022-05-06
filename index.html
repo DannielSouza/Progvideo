@@ -7,11 +7,12 @@
     <title>VideoStudio</title>
     <link rel="icon" type="image/png" href="./images/logo2.png">
     <link rel="stylesheet" type="text/css" href="./style/style.css">
-<body>
+<body id="body">
 
     <header class="header">
-        <div class="logoContainer">
-            <a href="index.html"><img src="./images/logo.png"></a>
+        <div id="logo" class="logoContainer">
+            <a id="logoPc" href="index.html"><img src="./images/logo.png"></a>
+            <a id="logoMobile" href="index.html"><img src="./images/logo2.png"></a>
         </div>
 
         <div class="formContainer">
@@ -22,8 +23,14 @@
         </div>
 
         <div class="menuContainer">
-            <div><img src="./images/notification.png" alt="notificação"></div>
-            <div><img src="./images/menu.png" alt="menu"></div>
+
+            <div class="themeContainer">
+                <div id="btnMoon" class="themeItem "><button onclick="changeTheme()"><img class="moonMode" src="./images/sun.png"> </button></div>
+                <div id="btnSun" class="themeItem invisivle"><button onclick="changeTheme()"><img class="sunMode " src="./images/moon2.png"> </button></div>
+            </div>
+
+            <div id="notificationIcon"><img src="./images/notification.png" alt="notificação"></div>
+            <div id="headerMenu"><img src="./images/menu.png" alt="menu"></div>
             <div class="profile"><img src="./images/profile.jpg" alt="profile picture"></div>
         </div>
     </header>
@@ -59,7 +66,7 @@
                      </a>
 
                      <div class="videoDetails">
-                        <a class="videoTitle" href="#">Titulo do video</a>
+                        <a id="videoTitle1" class="videoTitle" href="#">Titulo do video</a>
                         <a class="videoChannelName" href="#">Daniel Souza</a> 
 
                         <div class="videoMetadata">
@@ -81,7 +88,7 @@
                      </a>
 
                      <div class="videoDetails">
-                        <a class="videoTitle" href="#">Titulo do video</a>
+                        <a id="videoTitle2" class="videoTitle" href="#">Titulo do video</a>
                         <a class="videoChannelName" href="#">Daniel Souza</a> 
 
                         <div class="videoMetadata">
@@ -103,7 +110,7 @@
                      </a>
 
                      <div class="videoDetails">
-                        <a class="videoTitle" href="#">Titulo do video</a>
+                        <a id="videoTitle3" class="videoTitle" href="#">Titulo do video</a>
                         <a class="videoChannelName" href="#">Daniel Souza</a> 
 
                         <div class="videoMetadata">
@@ -125,7 +132,7 @@
                      </a>
 
                      <div class="videoDetails">
-                        <a class="videoTitle" href="#">Titulo do video</a>
+                        <a id="videoTitle4" class="videoTitle" href="#">Titulo do video</a>
                         <a class="videoChannelName" href="#">Daniel Souza</a> 
 
                         <div class="videoMetadata">
@@ -147,7 +154,7 @@
                      </a>
 
                      <div class="videoDetails">
-                        <a class="videoTitle" href="#">Titulo do video</a>
+                        <a  id="videoTitle5" class="videoTitle" href="#">Titulo do video</a>
                         <a class="videoChannelName" href="#">Daniel Souza</a> 
 
                         <div class="videoMetadata">
@@ -169,7 +176,7 @@
                      </a>
 
                      <div class="videoDetails">
-                        <a class="videoTitle" href="#">Titulo do video</a>
+                        <a id="videoTitle6" class="videoTitle" href="#">Titulo do video</a>
                         <a class="videoChannelName" href="#">Daniel Souza</a> 
 
                         <div class="videoMetadata">
@@ -191,7 +198,7 @@
                      </a>
 
                      <div class="videoDetails">
-                        <a class="videoTitle" href="#">Titulo do video</a>
+                        <a id="videoTitle7" class="videoTitle" href="#">Titulo do video</a>
                         <a class="videoChannelName" href="#">Daniel Souza</a> 
 
                         <div class="videoMetadata">
@@ -213,7 +220,7 @@
                      </a>
 
                      <div class="videoDetails">
-                        <a class="videoTitle" href="#">Titulo do video</a>
+                        <a id="videoTitle8" class="videoTitle" href="#">Titulo do video</a>
                         <a class="videoChannelName" href="#">Daniel Souza</a> 
 
                         <div class="videoMetadata">
@@ -229,5 +236,6 @@
 
     </div>
     
+    <script src="./scripts/index.js"></script>
 </body>
 </html>

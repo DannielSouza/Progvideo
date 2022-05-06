@@ -5,7 +5,20 @@
     padding: 0%;
     text-decoration: none;
     font-family: Roboto, Arial;
+    transition: .5s;
 }
+
+
+.themeContainer button{
+    background: none;
+}
+
+
+.invisivle{
+    display: none;
+}
+
+
 
 li{
     list-style: none;
@@ -32,6 +45,8 @@ body{
     animation: fadeIn .5s linear;
 }
 
+/* HEADER */
+
 .header{
     display: flex;
     height: 70px;
@@ -39,6 +54,18 @@ body{
     justify-content: space-between;
     align-items: center;
     position: relative;
+}
+
+.headerPc2{
+    display: none;
+}
+
+#logoMobile{
+    display: none;
+}
+
+.headerPc1{
+    display: block;
 }
 
 .header img{
@@ -54,17 +81,20 @@ body{
     position: relative;
 }
 
-#buscar{
-    width: 50px;
-    padding: 5px;
-    position: absolute;
+
+
+#buscar img{
+    width: 20px;
+    height: 20px;
 }
 
 #digitar{
     width: 500px;
-    border-radius: 4px 0px 0px 4px;
+    border-radius: 8px 0px 0px 8px;
     padding: 0px 10px;
     text-transform: uppercase;
+    border: 1px solid darkgray;
+    height: 42px;
 }
 input:focus {
     box-shadow: 0 0 0 0;
@@ -72,8 +102,14 @@ input:focus {
 }
 
 #buscar{
-    border-radius: 0px 4px 4px 0px;
+    height: 44px;
+    width: 50px;
+    position: absolute;
+    
+    border-radius: 0px 8px 8px 0px;
     cursor: pointer;
+    border: 1px solid darkgray;
+    border-left: none;
 }
 
 .formContainer input, button{
@@ -112,14 +148,30 @@ img{
 /*  CATEGORIAS  */
 
 .categories{
+    max-width: 100vw;
     padding: 1rem 1rem;
     border-bottom: 1px solid #999;
     height: 30px;
+    
+    
 }
 
 .categorySection{
+    justify-content: flex-start;
     display: flex;
     overflow: hidden;
+    overflow-x: auto;
+    height: 30px;
+}
+
+.categorySection::-webkit-scrollbar {
+    width: 0px;     
+    height: 0px;        
+}
+  
+.categorySection::-webkit-scrollbar-track {
+    
+    background: transparent;       
 }
 
 .category{
@@ -152,18 +204,25 @@ img{
 
 /*  VIDEOS  */
 
+.videos{
+    width: 1300px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    
+}
+
 .videoSection{
     display: flex;
-    gap: 3rem 1rem;
-    padding: 3rem 0;
-    margin: 0 1.5rem;
     flex-wrap: wrap;
+    margin-top: 10px;
+
     
 }
 
 .videoContainer{
-    display: flex;
-    flex-direction: column;
+    width: 280px;
+    margin: 20px;
     
 }
 
@@ -184,7 +243,7 @@ img{
 }
 
 .thumbnaill img{
-    width: 300px;
+    width: 280px;
 }
 
 .videoBottomSection{
@@ -229,11 +288,6 @@ img{
     color: lightgray;
 }
 
-.videoSection{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
 
 .videos{
     background-color: #202022;
@@ -260,3 +314,143 @@ body::-webkit-scrollbar {
       border-radius: 50%;
   }
 
+
+  /* THEME CHANGE */
+
+.whiteTheme{
+    background-color: #fafafa;
+    background: #fafafa;
+}
+
+.whiteThemeTitle{
+    color: black;
+}
+
+.whiteThemeInfos{
+    color: #6D6D6D;
+}
+
+/* MEDIAS */
+
+@media (min-width: 1500px){
+
+.categorySection{
+    justify-content: center;}
+}
+
+@media (max-width: 1050px){
+
+    #buscar{
+        width: 50px;
+    }
+    
+    #digitar{
+        width: 300px;
+    }
+
+
+    .videos{
+        width: 980px;
+        margin-left: 10px;
+    }
+
+}
+
+@media (max-width: 770px){
+
+    #buscar{
+        width: 30px;
+    }
+    
+    #digitar{
+        width: 150px;
+    }
+
+
+    .videos{
+        width: 640px;
+        margin-left: 10px;
+    }
+
+    #logoPc{
+        display: none;
+    }
+
+    #logoMobile{
+        display: block;
+    }
+
+    .categories{
+        padding: 10px 0px;
+    }
+
+}
+
+
+@media (max-width: 440px){
+
+    #buscar{
+        width: 35px;
+        top: 0px;
+        border: none;
+        background-color: transparent;
+        
+    }
+    
+    #digitar{
+        width: 0px;
+        opacity: 0;
+        
+    }
+
+
+    .videos{
+        width: 70vw;
+    }
+
+    .categories{
+        padding: 10px 0px;
+    }
+
+}
+
+@media (max-width: 380px){
+
+    .videos{
+        width: 315px;
+    }
+
+    .categories{
+        padding: 10px 0px;
+    }
+
+    #headerMenu{
+        display: none;
+    }
+
+}
+
+@media (max-width: 320px){
+
+    .videos{
+        width: 315px;
+    }
+
+    .categories{
+        padding: 10px 0px;
+    }
+
+    #notificationIcon{
+        display: none !important;
+    }
+
+    #headerMenu{
+        display: none;
+    }
+
+    .profile{
+        margin-right: 50vw;
+        margin-left: 0px;
+    }
+
+}

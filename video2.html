@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="./style/style3.css">
     <title>Video</title>
 </head>
-<body>
+<body id="body">
 
     <header class="header">
         <div class="logoContainer">
@@ -23,6 +23,12 @@
         </div>
 
         <div class="menuContainer">
+
+            <div class="themeContainer">
+                <div id="btnMoon" class="themeItem "><button onclick="changeTheme()"><img class="moonMode" src="./images/sun.png"> </button></div>
+                <div id="btnSun" class="themeItem invisivle"><button onclick="changeTheme()"><img class="sunMode " src="./images/moon2.png"> </button></div>
+            </div>
+
             <div><img src="./images/notification.png" alt="notificação"></div>
             <div><img src="./images/menu.png" alt="menu"></div>
             <div class="profile"><img src="./images/profile.jpg" alt="profile picture"></div>
@@ -68,16 +74,16 @@
 
         <div class="reactButtons">
 
-        <div class="infoOptions"><content> <img class="videoInfoImg" src="./images/like.png"><p>Gostei</p></content></div>
-        <div class="infoOptions"><content> <img class="videoInfoImg" src="./images/deslike.png"><p>Não gostei</p></content></div>
-        <div class="infoOptions"><content> <img class="videoInfoImg" src="./images/save.png"><p>Salvar</p></content></div>
-        <div class="infoOptions"><content> <img class="videoInfoImg" src="./images/share.png"><p>Compartilhar</p></content></div>
-
+            <div class="infoOptions"><content> <img class="videoInfoImg" src="./images/like.png"><p class="videoInfoText" >Gostei</p></content></div>
+            <div class="infoOptions"><content> <img class="videoInfoImg" src="./images/deslike.png"><p class="videoInfoText">Não gostei</p></content></div>
+            <div class="infoOptions"><content> <img class="videoInfoImg" src="./images/save.png"><p class="videoInfoText">Salvar</p></content></div>
+            <div class="infoOptions"><content> <img class="videoInfoImg" src="./images/share.png"><p class="videoInfoText">Compartilhar</p></content></div>
+    
         </div>
 
         <div class="profileVideo">
             <a><img src="./images/profile.jpg">
-            <div class="profileInfo"><p >Danniel's</p><span>3 milhões de inscritos</span></div></a>
+            <div class="profileInfo"><p id="profileChannelName" >Danniel's</p><span>3 milhões de inscritos</span></div></a>
         </div>
 
     </section>
@@ -249,6 +255,7 @@
     </section>
     
 
-    <script src="./scripts/script.js"></script>
+    <script src="./scripts/playerPage.js"></script>
+    <script src="./scripts/themeChangeVideo2.js"></script>
 </body>
 </html>
