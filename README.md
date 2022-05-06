@@ -1,3 +1,3 @@
 # Progvideo
  
-Link para o site: https://dannielsouza.github.io/progPc/ (Ainda em criação)
+Link para o site: https://dannielsouza.github.io/Progvideo/index.html (Ainda em criação)
