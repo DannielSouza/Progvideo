@@ -13,7 +13,7 @@
 
 <h2>Informações</h2>
   
-<h3>Resumo:</h3>  Criação de um site parecido com youtube, porém, com duas opções de players. Nesse projeto aprendi a como fazer botões com JavaScript que fizesse ações no video como Iniciar/Pausar, avançar e voltar. O projeto ainda não está finalizado porque ainda não deixei ele responsivo com telas menores como de tablets e celulares.
+<h3>Resumo:</h3>  Criação de um site parecido com youtube, porém, com duas opções de players. Nesse projeto aprendi a como fazer botões com JavaScript que fizesse ações no video como Iniciar/Pausar, avançar e voltar. O projeto ainda não está finalizado porque ainda não está responsivo com telas menores, como de tablets e celulares.
   
  <br>
  
