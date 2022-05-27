@@ -13,20 +13,67 @@ const views = document.querySelector('.views p')
 const videoPlayer = document.querySelector('.videoPlayer h2')
 const videoInfoText = document.querySelectorAll('.videoInfoText')
 
-function changeTheme(){
-    header.classList.toggle('whiteTheme')
-    body.classList.toggle("whiteTheme")
+const themeNow = localStorage.getItem('theme',)
+
+if( themeNow == null){
+    localStorage.setItem('theme', 'black')
+}else{
+    themeNow
+}
+
+if(themeNow == 'white'){
+    header.classList.add('whiteTheme')
+    body.classList.add("whiteTheme")
+    videoContainer.forEach( Element => Element.classList.add('whiteThemeTitle'))
+    videoInfos.forEach( Element => Element.classList.add('whiteThemeInfos'))
+    mainTitle.classList.add('whiteThemeTitle')
+    videoInfoText.forEach( Element => Element.classList.add('whiteThemeTitle'))
+    views.classList.add('whiteThemeInfos')
+    videoPlayer.classList.add('whiteThemeTitle')
+    mainChannelName.classList.add('whiteThemeTitle')
+
+    btnMoon.classList.toggle('invisivle')
+    btnSun.classList.toggle('invisivle')
+}
+
+
+
+function toWhiteTheme(){
+    if(localStorage.key('theme' == 'black')){
+    header.classList.add('whiteTheme')
+    body.classList.add("whiteTheme")
+    videoContainer.forEach( Element => Element.classList.add('whiteThemeTitle'))
+    videoInfos.forEach( Element => Element.classList.add('whiteThemeInfos'))
+    mainTitle.classList.add('whiteThemeTitle')
+    videoInfoText.forEach( Element => Element.classList.add('whiteThemeTitle'))
+    views.classList.add('whiteThemeInfos')
+    videoPlayer.classList.add('whiteThemeTitle')
+    mainChannelName.classList.add('whiteThemeTitle')
+
     btnMoon.classList.toggle('invisivle')
     btnSun.classList.toggle('invisivle')
     
+    localStorage.setItem('theme', 'white')
+    return
+    }
+}
 
-    videoContainer.forEach( Element => Element.classList.toggle('whiteThemeTitle'))
-    videoInfos.forEach( Element => Element.classList.toggle('whiteThemeInfos'))
-    mainTitle.classList.toggle('whiteThemeTitle')
-    videoInfoText.forEach( Element => Element.classList.toggle('whiteThemeTitle'))
+function toDarkTheme(){
+    if(localStorage.key('theme' == 'black')){
+    header.classList.remove('whiteTheme')
+    body.classList.remove("whiteTheme")
+    videoContainer.forEach( Element => Element.classList.remove('whiteThemeTitle'))
+    videoInfos.forEach( Element => Element.classList.remove('whiteThemeInfos'))
+    mainTitle.classList.remove('whiteThemeTitle')
+    videoInfoText.forEach( Element => Element.classList.remove('whiteThemeTitle'))
+    views.classList.remove('whiteThemeInfos')
+    videoPlayer.classList.remove('whiteThemeTitle')
+    mainChannelName.classList.remove('whiteThemeTitle')
 
-    
-    views.classList.toggle('whiteThemeInfos')
-    videoPlayer.classList.toggle('whiteThemeTitle')
-    mainChannelName.classList.toggle('whiteThemeTitle')
+    btnMoon.classList.toggle('invisivle')
+    btnSun.classList.toggle('invisivle')
+
+    localStorage.setItem('theme', 'black')
+    return
+    }
 }

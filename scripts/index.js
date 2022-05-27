@@ -5,20 +5,25 @@ const videoTitle = document.querySelectorAll(".videoTitle")
 const body = document.getElementById('body')
 const videoChannelName = document.querySelectorAll('.videoDetails > .videoChannelName')
 const videoDetailsInfos = document.querySelectorAll('.videoDetails > .videoMetadata')
-
-
 const btnMoon = document.getElementById('btnMoon')
 const btnSun = document.getElementById('btnSun')
 
-function changeTheme(){
-    
-    header.classList.toggle('whiteTheme')
-    categories.classList.toggle('whiteTheme')
-    videosContainer.classList.toggle('whiteTheme')
-    body.classList.toggle("whiteTheme")
-    videoChannelName.forEach( Element => Element.classList.toggle('whiteThemeInfos'))
-    videoDetailsInfos.forEach( Element => Element.classList.toggle('whiteThemeInfos'))
-    videoTitle.forEach( Element => Element.classList.toggle('whiteThemeTitle'))
+const themeNow = localStorage.getItem('theme',)
+
+if( themeNow == null){
+    localStorage.setItem('theme', 'black')
+}else{
+    themeNow
+}
+
+if(themeNow == 'white'){
+    header.classList.add('whiteTheme')
+    categories.classList.add('whiteTheme')
+    videosContainer.classList.add('whiteTheme')
+    body.classList.add("whiteTheme")
+    videoChannelName.forEach( Element => Element.classList.add('whiteThemeInfos'))
+    videoDetailsInfos.forEach( Element => Element.classList.add('whiteThemeInfos'))
+    videoTitle.forEach( Element => Element.classList.add('whiteThemeTitle'))
 
     btnMoon.classList.toggle('invisivle')
     btnSun.classList.toggle('invisivle')
@@ -26,3 +31,41 @@ function changeTheme(){
 
 
 
+function toWhiteTheme(){
+    if(localStorage.key('theme' == 'black')){
+    header.classList.add('whiteTheme')
+    categories.classList.add('whiteTheme')
+    videosContainer.classList.add('whiteTheme')
+    body.classList.add("whiteTheme")
+    videoChannelName.forEach( Element => Element.classList.add('whiteThemeInfos'))
+    videoDetailsInfos.forEach( Element => Element.classList.add('whiteThemeInfos'))
+    videoTitle.forEach( Element => Element.classList.add('whiteThemeTitle'))
+
+    btnMoon.classList.toggle('invisivle')
+    btnSun.classList.toggle('invisivle')
+
+    localStorage.setItem('theme', 'white')
+    return
+    }
+}
+
+    function toDarkTheme(){
+
+
+    if(localStorage.key('theme' == 'black')){
+    header.classList.remove('whiteTheme')
+    categories.classList.remove('whiteTheme')
+    videosContainer.classList.remove('whiteTheme')
+    body.classList.remove("whiteTheme")
+    videoChannelName.forEach( Element => Element.classList.remove('whiteThemeInfos'))
+    videoDetailsInfos.forEach( Element => Element.classList.remove('whiteThemeInfos'))
+    videoTitle.forEach( Element => Element.classList.remove('whiteThemeTitle'))
+
+    btnMoon.classList.toggle('invisivle')
+    btnSun.classList.toggle('invisivle')
+
+    localStorage.setItem('theme', 'black')
+    return
+    }
+
+}
