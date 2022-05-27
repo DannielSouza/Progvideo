@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content= "width=device-width, user-scalable=no">
     <link rel="icon" type="image/png" href="./images/logo2.png">
     <link rel="stylesheet" type="text/css" href="./style/style3.css">
     <title>Video</title>
@@ -12,7 +12,8 @@
 
     <header class="header">
         <div class="logoContainer">
-            <a href="index.html"><img src="./images/logo.png"></a>
+            <a id="logo1" href="index.html"><img src="./images/logo.png"></a>
+            <a id="logo2" href="index.html"><img src="./images/logo2.png"></a>
         </div>
 
         <div class="formContainer">
@@ -35,57 +36,56 @@
         </div>
     </header>
 
-    <section class="container">
+    <section id="sectionContainer" class="container">
 
-    <section>
+    <section class="videoContainer">
 
-        <section class="videoPlayerContainer">
-        <div class="video"><video id="video1" class="videoPlace" src="./images/song.mp4" poster="./images/thumb3.jpg"></video></div>
-       
-       
-        <div class="botoes">
-
-            
-            <div class="botoesL">
-                <img onclick="voltar()" src="./images/back.png">
-                <img class="btnPlay" src="./images/play.png" value="0">
-                <img class="btnPause" src="./images/pause.png">                
-                <img onclick="avancar()" src="./images/foward.png">
-            </div>
-            
+            <section class="videoPlayerContainer">
+                <div class="video">
+                    <video id="video1" class="videoPlace" src="./images/song.mp4" poster="./images/thumb3.jpg"></video>
+                </div>
         
-
-
-            
-            
         
-        </div>
-        </section>
+                <div class="botoes">
+
+                    <div class="botoesL">
+                        <img onclick="voltar()" src="./images/back.png">
+                        <img class="btnPlay" src="./images/play.png" value="0">
+                        <img class="btnPause" src="./images/pause.png">                
+                        <img onclick="avancar()" src="./images/foward.png">
+                    </div>
+                    
+                </div>
+            </section>
 
 
-        <div class="videoPlayer"><h2>Player de video:</h2></div>
-            <div class="options"><a id="option1" href="video.html" >Original</a>
-            <a id="option2" href="video2.html">Player 2 (BETA)</a></div>
-        
+                <div class="videoPlayer">
+                    <h2>Player de video:</h2>
+                </div>
+                <div class="options">
+                    <a id="option1" href="video.html" >Original</a>
+                    <a id="option2" href="video2.html">Player 2 (BETA)</a>
+                </div>
+            
 
+            <section class="mainVideoBottom">
+                <div class="titleVideo"><h1>Titulo do video</h1></div>
+                <div class="views"><p>1.4M vizualizações</p></div>
 
-        <div class="titleVideo"><h1>Titulo do video</h1></div>
-        <div class="views"><p>1.4M vizualizações</p></div>
+                <div class="reactButtons">
 
-        <div class="reactButtons">
+                    <div class="infoOptions"><content> <img class="videoInfoImg" src="./images/like.png"><p class="videoInfoText" >Gostei</p></content></div>
+                    <div class="infoOptions"><content> <img class="videoInfoImg" src="./images/deslike.png"><p class="videoInfoText">Não gostei</p></content></div>
+                    <div class="infoOptions"><content> <img class="videoInfoImg" src="./images/save.png"><p class="videoInfoText">Salvar</p></content></div>
+                    <div class="infoOptions"><content> <img class="videoInfoImg" src="./images/share.png"><p class="videoInfoText">Compartilhar</p></content></div>
+            
+                </div>
 
-            <div class="infoOptions"><content> <img class="videoInfoImg" src="./images/like.png"><p class="videoInfoText" >Gostei</p></content></div>
-            <div class="infoOptions"><content> <img class="videoInfoImg" src="./images/deslike.png"><p class="videoInfoText">Não gostei</p></content></div>
-            <div class="infoOptions"><content> <img class="videoInfoImg" src="./images/save.png"><p class="videoInfoText">Salvar</p></content></div>
-            <div class="infoOptions"><content> <img class="videoInfoImg" src="./images/share.png"><p class="videoInfoText">Compartilhar</p></content></div>
-    
-        </div>
-
-        <div class="profileVideo">
-            <a><img src="./images/profile.jpg">
-            <div class="profileInfo"><p id="profileChannelName" >Danniel's</p><span>3 milhões de inscritos</span></div></a>
-        </div>
-
+                <div class="profileVideo">
+                    <a><img src="./images/profile.jpg">
+                    <div class="profileInfo"><p id="profileChannelName" >Danniel's</p><span>3 milhões de inscritos</span></div></a>
+                </div>
+            </section>
     </section>
     
   

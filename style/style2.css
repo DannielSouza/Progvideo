@@ -116,23 +116,13 @@ img{
 
 /* VIDEOS RECOMENDADOS  */
 
-/* .videoSection{
-    display: flex;
-    gap: 3rem 1rem;
-    padding: 3rem 0;
-    margin: 0 1.5rem;
-    flex-wrap: wrap;
-} */
-
 .videoContainer{
     display: flex;
     flex-direction: column;
     margin-bottom: 30px;
 }
 
-.videoContainer{
-    overflow-x: hidden;
-}
+
 
 .thumbnaill{
     position: relative;
@@ -196,11 +186,6 @@ img{
     color: lightgray;
 }
 
-/* .videoSection{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-} */
 
 .videos{
     background-color: #202022;
@@ -215,7 +200,6 @@ img{
     max-width: 800px;
     left: 50%;
     transform: translateX(-50%);
-    /* margin:  0 auto; */
     justify-content: space-around;
     gap: 5rem;
 }
@@ -384,11 +368,25 @@ body::-webkit-scrollbar-thumb {
 
 /* MEDIAS */
 
+@media (max-width: 1050px){
+
+    .videoPlace{
+        width: 150%;
+    }
+
+    #buscar{
+        width: 50px;
+    }
+    
+    #digitar{
+        width: 300px;
+    }
+
+}
+
 @media (max-width: 950px){
 
-    /* .videoContainer{
-        max-width: 50%;
-    } */
+
     .video{
         margin-bottom: 50vw;
     }
@@ -411,18 +409,10 @@ body::-webkit-scrollbar-thumb {
         text-align: center;
         align-items: center;
     }
+
     .profileInfo{
         text-align: left;
     }
-
-
-
-
-
-
-    /* video{
-        width: 80%;
-    } */
 
     .videoInfoText{
         display: none;
@@ -430,28 +420,11 @@ body::-webkit-scrollbar-thumb {
 
 }
 
-@media (max-width: 1050px){
-
-    .videoPlace{
-        width: 150%;
-    }
-
-
-
-    #buscar{
-        width: 50px;
-    }
-    
-    #digitar{
-        width: 300px;
-    }
-
-
-}
-
 @media (max-width: 770px){
 
-
+    .videoContainer{
+        overflow-x: hidden;
+    }
 
     #logo1{
         display: none;
@@ -476,9 +449,7 @@ body::-webkit-scrollbar-thumb {
         display: block;
     }
 
-
 }
-
 
 @media (max-width: 480px){
 
@@ -500,16 +471,9 @@ body::-webkit-scrollbar-thumb {
         
     }
 
-    
-
-
 }
 
 @media (max-width: 320px){
-
-    /* .videos{
-        width: 315px;
-    } */
 
     #notificationIcon{
         display: none;

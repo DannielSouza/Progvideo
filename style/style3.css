@@ -41,6 +41,10 @@ body{
     box-sizing: border-box;
 }
 
+#logo2{
+    display: none;
+}
+
 .header img{
     height: 40px;
 }
@@ -114,17 +118,10 @@ img{
 
 /* VIDEOS RECOMENDADOS  */
 
-.videoSection{
-    display: flex;
-    gap: 3rem 1rem;
-    padding: 3rem 0;
-    margin: 0 1.5rem;
-    flex-wrap: wrap;
-}
-
 .videoContainer{
     display: flex;
     flex-direction: column;
+    margin-bottom: 30px;
 }
 
 .thumbnaill{
@@ -189,40 +186,28 @@ img{
     color: lightgray;
 }
 
-.videoSection{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.videos{
-    background-color: #202022;
-}
-
-.videoContainer{
-    margin-bottom: 30px;
-}
-
 /*  ESTRUTURA  */
 
 .container{
-    display: flex;
-    flex-wrap: wrap;
-
-    
-    margin-left: 5vw;
-    margin-right: 5vw;
-    
+    position: absolute;
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    max-width: 800px;
+    left: 50%;
+    transform: translateX(-50%);
+    justify-content: space-around;
+    gap: 5rem;
 }
 
 
-.sideBar > div{
-    margin-bottom: 15px;
+.sideBar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .containerSideBar{
-    margin: auto;
-    
+    max-width: 850px;
 }
 
 /*  SCROLLBAR  */
@@ -246,7 +231,6 @@ body::-webkit-scrollbar-thumb {
 
 .videoPlayer{
     justify-content: center;
-    max-width: 860px;
     display: flex;
     align-items: center;
     color: white;
@@ -255,14 +239,13 @@ body::-webkit-scrollbar-thumb {
 
 .options{
     justify-content: center;
-    width: 860px;
     display: flex;
     align-items: center;
 }
 
 .options a{
     color: white;
-    border: 1px solid white;
+    border: 1px solid darkgray;
     border-radius: 5px;
     padding: 5px 15px;
     transition: .6s;
@@ -273,11 +256,11 @@ body::-webkit-scrollbar-thumb {
 }
 
 #option1{
-    background-color:  #00747c;
+    background-color: #00bbc9;
 }
 
 #option2{
-    background-color: #00bbc9;
+    background-color:#00747c;
 }
 
 .options a+a{
@@ -291,8 +274,12 @@ body::-webkit-scrollbar-thumb {
     font-family: Arial, Helvetica, sans-serif;
     margin-top: 30px;
     position: relative;
-    width: 850px;
+    max-width: 850px;
     padding-top: 30px;
+}
+
+#profileChannelName{
+    cursor: pointer;
 }
 
 .views{
@@ -302,8 +289,7 @@ body::-webkit-scrollbar-thumb {
 
 .reactButtons{
     display: flex;
-    position: absolute;
-    left: 28vw;    
+    float: right;
 }
 
 .infoOptions img{
@@ -360,12 +346,10 @@ body::-webkit-scrollbar-thumb {
 
 .videoPlayerContainer{
     margin: 0 auto;
-    width: 854px;
 }
 
 .video{
     position: relative;
-    width: 854px;
     border: 1px solid black;
     border-bottom: none;
 }
@@ -373,7 +357,6 @@ body::-webkit-scrollbar-thumb {
 .botoes{
     display: flex;
     justify-content: center;
-    width: 854px;
     transition: .7s;
     margin-bottom: 20px;
     border: 1px solid black;
@@ -414,4 +397,122 @@ body::-webkit-scrollbar-thumb {
 
 .whiteThemeInfos{
     color: #6D6D6D !important;
+}
+
+/* MEDIAS QUERIES */
+
+@media (max-width: 1050px){
+
+    .videoPlayerContainer{
+        width: 100%;
+    }
+
+    .videoPlace{
+        width: 100%;
+    }
+
+    #buscar{
+        width: 50px;
+    }
+    
+    #digitar{
+        width: 300px;
+    }
+
+}
+
+@media (max-width: 950px){
+
+
+    .video{
+        margin-bottom: 45vw;
+    }
+    .videoPlace{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .container{
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 0 auto;
+        gap: 0;
+    }
+
+    .mainVideoBottom{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .profileInfo{
+        text-align: left;
+    }
+
+    .videoInfoText{
+        display: none;
+    }
+
+}
+
+@media (max-width: 770px){
+
+    .videoContainer{
+        overflow-x: hidden;
+    }
+
+    #logo1{
+        display: none;
+    }
+    #logo2{
+        display: block;
+    }
+
+    #buscar{
+        width: 30px;
+    }
+    
+    #digitar{
+        width: 150px;
+    }
+
+    #logoPc{
+        display: none;
+    }
+
+    #logoMobile{
+        display: block;
+    }
+
+}
+
+@media (max-width: 480px){
+
+    .videoPlace{
+        width: 110%;
+    }
+
+    #buscar{
+        width: 35px;
+        top: 0px;
+        border: none;
+        background-color: transparent;
+        
+    }
+    
+    #digitar{
+        width: 0px;
+        opacity: 0;
+        
+    }
+
+}
+
+@media (max-width: 320px){
+
+    #notificationIcon{
+        display: none;
+    }
 }
